@@ -1,0 +1,29 @@
+.footer
+    background: #333333
+    padding-block: 8rem 
+    &__logo
+        height: 15rem
+    &__list
+        text-align: center
+        list-style: none
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 5rem
+            @include respond(tab-port)
+                margin: 0
+                padding: 1.7rem
+        a
+            &:link, &:visited
+                text-decoration: none
+                color: $color-grey
+                font-size: $font-size-paragraph
+                letter-spacing: .2rem
+                font-weight: 300
+                text-transform: uppercase
+                display: inline-block
+                transition: all .2s
+            &:hover
+                transform: rotate(5deg) scale(1.2)
+                color: $color-brown-light
+

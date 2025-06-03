@@ -1,0 +1,55 @@
+.card-review
+    position: relative
+    width: 75%
+    margin: 0 auto
+    background: rgba($color-white, .85)
+    box-shadow: $box-shadow
+    padding: 5rem 8rem
+    transform: skewX(-30deg)
+    margin-bottom: 8rem
+    @include respond(tab-port)
+        transform: skewX(-15deg)
+        text-align: center
+        padding: 4rem
+    &__img
+        width: 15rem
+        height: 15rem
+        float: left
+        border-radius: 10rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkit-shape-outside: circle(50% at 50% 50%)
+        margin-right: 6rem
+        margin-bottom: 2rem
+        position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 3rem
+        img
+            transform: scale(1.2)
+            transition: all .5s
+            
+        
+    & > *
+        transform: skewX(30deg)
+        @include respond(tab-port)
+            transform: skewX(15deg)
+    &__name
+        font-size: 2rem
+        letter-spacing: .2rem
+        font-weight: 400
+        text-transform: uppercase
+        color: $color-white
+        text-align: center
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -20%)
+        opacity: 0
+        transition: all .5s
+    &:hover &__name
+        transform: translate(-50%, -50%)
+        opacity: 1
+    &:hover img
+        transform: scale(1)
+        filter: blur(.3rem) brightness(70%)
